@@ -1,17 +1,14 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { clearNavData } from './navDataSlice'
 
 export function NavDataList() {
     const nav = useSelector((state) => state.navData.value)
-    const dispatch = useDispatch()
-    const [showNav, setShowNav] = useState(true)
-
-
+    // const dispatch = useDispatch()
 
     console.log(nav)
+    
     return (
-        <div className='h-[100dvh]' style={{display: showNav ? 'block' : 'none' }} onClick={()=>{setShowNav(false)}}>
+        <div>
             {
                 nav.results.map((item, i) => {
                     return (

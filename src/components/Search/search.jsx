@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { setMovieData } from '../../features/movie/movieDataSlice';
 import { setMovieInput } from '../../features/movie/movieSearchSlice';
-import { MovieDataList } from '../../features/movie/movieData';
+// import { MovieDataList } from '../../features/movie/movieData';
 import { NavDataList } from '../../features/nav/navData';
 import { setNavInput } from '../../features/nav/navSearchSlice';
 import { setNavData } from '../../features/nav/navDataSlice';

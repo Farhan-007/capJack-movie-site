@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { NavSearchbar, Searchbar } from '../components/Search/search';
+import { NavSearchbar} from '../components/Search/search';
 import { MovieDataList } from '../features/movie/movieData';
 
 
 
 const FilterPage = () => {
     const searchInput = useSelector((state) => state.movieSearch.value)
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
     return (
         <div>
