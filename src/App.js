@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, HashRouter } from "react-router-dom";
+import CommonContainer from "./CommonContainer";
+import FilterPage from "./Pages/filterPage";
+import HomePage from "./Pages/homePage";
+import LandingPage from "./Pages/landingPage";
+import SinglePage from "./Pages/singlePage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HashRouter>
+        <Routes>
+          
+          <Route path="/"
+            element={<LandingPage />}
+          />
+
+          <Route path="/home"
+            element={<CommonContainer>
+              <HomePage />
+            </CommonContainer>}
+          />
+
+          <Route path="/watch"
+            element={<CommonContainer>
+              <SinglePage />
+            </CommonContainer>}
+          />
+
+          <Route path="/filter"
+            element={<CommonContainer>
+              <FilterPage />
+            </CommonContainer>}
+          />
+
+
+        </Routes>
+      </HashRouter>
+    </>
   );
 }
 
