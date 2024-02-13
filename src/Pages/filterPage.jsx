@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { NavSearchbar} from '../components/Search/search';
 import { MovieDataList } from '../features/movie/movieData';
 
